@@ -1,3 +1,118 @@
 index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL'SBOOK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>GL'SBOOK</h1>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Bem-vinda ao GL'SBOOK 💗</h2>
+        <p>A sua rede social de GL Tailandês e Sul-Coreano.</p>
+    </section>
+
+    <section class="feed">
+        <h3>Feed das usuárias</h3>
+        <div id="posts"></div>
+    </section>
+
+    <section class="new-post">
+        <textarea id="postText" placeholder="Escreva algo sobre sua GL favorita..."></textarea>
+        <button onclick="addPost()">Postar</button>
+    </section>
+</main>
+
+<footer>
+    <p>GL'SBOOK © 2025</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
 style.css
-script.js
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd4d9, #ffb6b9, #ffffff);
+    color: #b65a73;
+}
+
+header {
+    background-color: #ffb6b9;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.feed {
+    padding: 20px;
+}
+
+#posts {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffb6b9;
+}
+
+.post {
+    background: #ffe2e5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.new-post {
+    margin: 20px;
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid #ffb6b9;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 25px;
+    background-color: #ffb6b9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+main.js
+function addPost() {
+    const text = document.getElementById("postText").value;
+
+    if (text.trim() === "") return;
+
+    const posts = document.getElementById("posts");
+
+    const newPost = document.createElement("div");
+    newPost.className = "post";
+    newPost.innerText = text;
+
+    posts.prepend(newPost);
+
+    document.getElementById("postText").value = "";
+}
