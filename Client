@@ -7,7 +7,9 @@ index.html
     <title>GL'SBOOK</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>:<div class="banner">
+    <img src="banner-glsbook.png" alt="Banner GL'SBOOK">
+</div>
 
 <header>
     <h1>GL'SBOOK</h1>
