@@ -88,3 +88,6 @@ body.landing {
     background-color: white;
     color: #ff8fa3;
 }
+<div class="banner">
+    <img src="./assets/file_00000000718c71f5b6d9d1ae681545ee.png" alt="Banner GL'SBOOK">
+</div>
