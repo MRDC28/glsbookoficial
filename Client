@@ -204,3 +204,184 @@ cadastro.html
 
 </body>
 </html>
+home.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GL'SBOOK - Home</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff7f9;
+        display: flex;
+        color: #333;
+    }
+
+    /* ==== LATERAL ESQUERDA ==== */
+    #sidebar {
+        width: 260px;
+        height: 100vh;
+        background: #f4c8d2;
+        padding: 20px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-right: 2px solid #f7a7b5;
+    }
+
+    #sidebar h2 {
+        color: #b13853;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .menu-item {
+        padding: 12px;
+        margin-bottom: 10px;
+        background: #ffe3ea;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+        text-align: center;
+    }
+
+    .menu-item:hover {
+        background: #f7b8c7;
+    }
+
+    /* ==== FEED ==== */
+    #feed {
+        margin-left: 280px;
+        width: 600px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-right: 2px solid #f7a7b5;
+    }
+
+    .new-post {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ffd2dc;
+    }
+
+    .new-post textarea {
+        width: 100%;
+        height: 70px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #f7b8c7;
+    }
+
+    .new-post button {
+        background: #f7a7b5;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* ==== POST ==== */
+    .post {
+        background: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        border: 2px solid #ffd2dc;
+    }
+
+    .post-user {
+        font-weight: bold;
+        color: #b13853;
+    }
+
+    /* ==== LATERAL DIREITA ==== */
+    #rightbar {
+        width: 300px;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .box {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        border: 2px solid #ffd2dc;
+        margin-bottom: 20px;
+    }
+
+    .box h3 {
+        color: #b13853;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ==== MENU LATERAL ==== -->
+<div id="sidebar">
+    <h2>GL'SBOOK</h2>
+
+    <div class="menu-item">Home</div>
+    <div class="menu-item">Reels</div>
+    <div class="menu-item">Notificações</div>
+    <div class="menu-item">Meu Perfil</div>
+    <div class="menu-item" onclick="logout()">Sair</div>
+</div>
+
+<!-- ==== FEED PRINCIPAL ==== -->
+<div id="feed">
+    <div class="new-post">
+        <textarea placeholder="O que você está pensando?"></textarea>
+        <br>
+        <button>Publicar</button>
+    </div>
+
+    <!-- Exemplo de posts -->
+    <div class="post">
+        <div class="post-user">@usuariaGL</div>
+        <p>Primeira postagem no GL'SBOOK! 💖✨</p>
+    </div>
+
+    <div class="post">
+        <div class="post-user">@thaiGL</div>
+        <p>Quem ama GL tailandês?? 🔥🇹🇭</p>
+    </div>
+</div>
+
+<!-- ==== LATERAL DIREITA ==== -->
+<div id="rightbar">
+    <div class="box">
+        <h3>Sugestões para seguir</h3>
+        <p>@girlLoveThai</p>
+        <p>@koreanGLworld</p>
+        <p>@shippsGL</p>
+    </div>
+
+    <div class="box">
+        <h3>Tendências</h3>
+        <p>#GLTailandês</p>
+        <p>#GLSulCoreano</p>
+        <p>#CasaisGL</p>
+    </div>
+</div>
+
+<script>
+    function logout(){
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>
