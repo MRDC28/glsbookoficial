@@ -1,5 +1,3 @@
-# glsbookoficial
-Rede social GL Tailandês e Sul Coreano
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
