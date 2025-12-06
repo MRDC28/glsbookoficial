@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GL'SBOOK – Rede Social GL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ff0080;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #createPostContainer {
+            background: #222;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #mediaPreview img,
+        #mediaPreview video {
+            margin-top: 10px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ff0080;
+            color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #mainFeed {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>GL'SBOOK</header>
+
+    <div id="createPostContainer">
+        <h3>Criar Nova Publicação ou Reel</h3>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <textarea id="caption" name="caption" placeholder="O que você está pensando?" required></textarea>
+
+            <input 
+                type="file" 
+                id="mediaFile"
